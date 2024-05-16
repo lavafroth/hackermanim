@@ -1,2 +1,3 @@
 from .hackermanim import CodeTransformer
-__all__ = ['CodeTransformer']
+from .octicon import octicon
+__all__ = ['CodeTransformer', 'octicon']
