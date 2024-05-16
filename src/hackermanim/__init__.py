@@ -1,1 +1,2 @@
-from hackermanim import *
+from .hackermanim import CodeTransformer
+__all__ = ['CodeTransformer']

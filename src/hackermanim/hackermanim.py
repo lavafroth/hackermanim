@@ -168,8 +168,3 @@ class CodeTransformer:
         self.diffs = list(sequence_matcher.get_opcodes())
         self.post = copy(self.end)
         self._committed_transformation = False
-
-
-def octicon(name: str, *args, **kwargs) -> SVGMobject:
-    from os import path
-    return SVGMobject(path.join(path.dirname(__file__), 'octicons', 'icons', name), *args, **kwargs)
