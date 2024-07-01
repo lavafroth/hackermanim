@@ -1,3 +1,4 @@
 from .hackermanim import CodeTransformer
 from .octicon import octicon
-__all__ = ['CodeTransformer', 'octicon']
+from .ripple import ripple
+__all__ = ['CodeTransformer', 'octicon', 'ripple']
