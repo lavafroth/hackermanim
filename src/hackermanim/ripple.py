@@ -8,4 +8,4 @@ def ripple(mobjects: Iterable[Mobject], center_correction=None) -> AnimationGrou
         center_correction = center_correction or 0.05 * UP
         curve = curve.copy().move_to(char.get_center() + center_correction)
         anims.append(MoveAlongPath(char, curve))
-    return AnimationGroup(*anims)
+    return AnimationGroup(*anims, lag_ratio=0.1)
