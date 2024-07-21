@@ -3,21 +3,13 @@ from manim import Paragraph, Text
 class MonoText(Text):
     font = "monospace"
     def __init__(self, *args, **kwargs):
-        if kwargs.get('font'):
-            raise ValueError('MonoText font is not supposed to be set during instantiation')
-        super().__init__(*args, **kwargs, font=MonoText.font)
-
-    @classmethod
-    def set_font(cls, font: str):
-        cls.font = font
+        if kwargs.get('font') and kwargs['font'] == '':
+            kwargs['font'] = MonoText.font
+        super().__init__(*args, **kwargs)
 
 class MonoParagraph(Paragraph):
     font = "monospace"
     def __init__(self, *args, **kwargs):
-        if kwargs.get('font'):
-            raise ValueError('MonoParagraph font is not supposed to be set during instantiation')
-        super().__init__(*args, **kwargs, font=MonoParagraph.font)
-
-    @classmethod
-    def set_font(cls, font: str):
-        cls.font = font
+        if kwargs.get('font') and kwargs['font'] == '':
+            kwargs['font'] = MonoParagraph.font
+        super().__init__(*args, **kwargs)
